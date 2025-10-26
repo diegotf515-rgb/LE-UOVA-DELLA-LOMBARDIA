@@ -1,40 +1,23 @@
-
-/* Reset & base */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color:#263238;
-  background:#fafafa;
-  line-height:1.6;
-}
+body{font-family:system-ui,Roboto,Arial,sans-serif;background:#fafafa;color:#263238;line-height:1.6}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 header.hero{background:#e8f5e9}
 header.hero .media{width:100%;display:block}
-h1,h2,h3{font-family: 'Merriweather', Georgia, serif;color:#1b5e20;margin:0 0 12px}
+h1,h2,h3{font-family:'Merriweather',Georgia,serif;color:#1b5e20;margin:0 0 12px}
 section{padding:40px 0}
-.lead{font-size:1.2rem;color:#455a64}
+.lead{font-size:1.1rem;color:#455a64}
 .grid{display:grid;gap:20px}
-.grid.cols-2{grid-template-columns: repeat(2, minmax(0,1fr))}
-.grid.cols-3{grid-template-columns: repeat(3, minmax(0,1fr))}
-.card{
-  background:white;border-radius:16px;padding:20px;
-  box-shadow:0 8px 24px rgba(0,0,0,.06);
-}
+.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
 .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#c8e6c9;color:#1b5e20;font-weight:600;font-size:.85rem}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-button, .btn{
-  border:0;border-radius:12px;padding:12px 18px;font-weight:700;cursor:pointer;
-  background:#2e7d32;color:white;box-shadow:0 6px 16px rgba(46,125,50,.25);
-}
-button.secondary{background:#ffffff;color:#2e7d32;border:2px solid #2e7d32}
-input,select,textarea{
-  width:100%;padding:12px;border:1px solid #cfd8dc;border-radius:10px;background:white
-}
+button,.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;cursor:pointer;background:#2e7d32;color:#fff;box-shadow:0 6px 16px rgba(46,125,50,.25)}
+button.secondary{background:#fff;color:#2e7d32;border:2px solid #2e7d32}
+input,select{width:100%;padding:12px;border:1px solid #cfd8dc;border-radius:10px;background:#fff}
 label{font-weight:600;color:#37474f}
 footer{padding:28px 0;background:#e8f5e9;color:#1b5e20;margin-top:40px}
 .small{font-size:.9rem;color:#607d8b}
-@media (max-width: 800px){
-  .grid.cols-2{grid-template-columns:1fr}
-  .grid.cols-3{grid-template-columns:1fr}
-}
+@media (max-width:800px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
+
