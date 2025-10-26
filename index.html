@@ -1,106 +1,35 @@
-<!-- Header -->
-<h1>Uova di Lombardia</h1>
-<p class="tag">Uova fresche da galline allevate libere · Recinto di 3.000 m² · Milano</p>
+<header class="site-header">
+  <h1>Uova di Lombardia</h1>
+  <p class="tag">Galline allevate libere in 3.000 m² · Uova dai colori naturali · Milano</p>
+</header>
 
-<!-- Hero -->
-<h2>Uova naturali da galline felici</h2>
-<p>Galline allevate libere, alimentate 100% biologico. Uova dai colori unici e dal tuorlo intenso.</p>
+<section id="hero" class="card" style="background-image:url('immagini/fondo-pradera.jpg');">
+  <h2>Uova naturali da galline felici</h2>
+  <p>Le nostre galline pascolano libere, alimentate 100% biologico. Uova dai gusci colorati e tuorli intensi.</p>
+</section>
 
-<!-- Sezione Galine -->
-<h2>Galine — Le nostre razze</h2>
-<p>Ogni razza con il suo colore e il peso dell'uovo.</p>
+<section id="galine" class="card">
+  <h2>Galine — Le nostre razze</h2>
+  <p>Scegli la gallina e ordina le uova che preferisci. Tutte le uova a €0,70 cad. Confezioni da 14 uova a 10 €.</p>
+  <div class="grid" id="breed-list"></div>
+</section>
 
-<!-- Altri uova -->
-<h2>Altri uova</h2>
-
-<!-- Sezione ordini -->
-<h2>Effettua un ordine</h2>
-<p>Seleziona le uova e inviaci un messaggio tramite WhatsApp o email.</p>
-<label>Nome
-  <input type="text" name="name" required />
-</label>
-<label>Telefono (WhatsApp)
-  <input type="tel" name="phone" />
-</label>
-<label>Ordine (es. 6 x Araucana, 12 x Libornense)
-  <textarea name="order" rows="3" required></textarea>
-</label>
-<button type="submit">Invia ordine</button>
-
-<p class="small">Oppure invia un WhatsApp diretto: <a id="whatsapp-link" href="#">Apri WhatsApp</a></p>
-
-<!-- Chi siamo -->
-<h2>Chi siamo</h2>
-<p>Situati in Lombardia (Milano). Galline allevate 100% all'aperto in un recinto di 3.000 m², pascolano tutto il giorno e ricevono alimentazione naturale per una vita senza stress.</p>
-
-<!-- Footer -->
-<p>Uova di Lombardia — Milano · Prezzo: €0.70 per uovo · <small>Testi e immagini di esempio. Aggiorna contatti prima di pubblicare.</small></p>
-const breeds = [
-  {
-    name: 'Mara',
-    color: 'Cioccolato scuro',
-    weight: '60–65 g',
-    price: '€0.70',
-    desc: 'Gallina Mara — Uova cioccolato scuro, allevate libere e felici.',
-    img: 'immagini/mara.jpg'
-  },
-  {
-    name: 'Libornense',
-    color: 'Bianco',
-    weight: '55–60 g',
-    price: '€0.70',
-    desc: 'Gallina Libornense — Uova bianche, allevate all’aperto.',
-    img: 'immagini/libornense.jpg'
-  },
-  {
-    name: 'Araucana',
-    color: 'Blu',
-    weight: '50–60 g',
-    price: '€0.70',
-    desc: 'Gallina Araucana — Uova blu, allevate libere e felici.',
-    img: 'immagini/arau.jpg'
-  },
-  {
-    name: 'Egger',
-    color: 'Verde oliva',
-    weight: '50–60 g',
-    price: '€0.70',
-    desc: 'Gallina Egger — Incrocio Mara × Araucana, uova verde oliva.',
-    img: 'immagini/egger.jpg'
-  },
-  {
-    name: 'Australop',
-    color: 'Blu non chiaro',
-    weight: '55–60 g',
-    price: '€0.70',
-    desc: 'Gallina Australop — Uova bluastre, allevate all’aperto.',
-    img: 'immagini/australop.jpg'
-  }
-];
-
-const others = [
-  {
-    name: 'Quaglie',
-    color: 'Crema con puntini neri',
-    weight: '10–12 g',
-    price: '€0.70',
-    desc: 'Uova di quaglie — piccole e delicate.',
-    img: 'immagini/quaglia.jpg'
-  },
-  {
-    name: 'Anatramuta',
-    color: 'Bianco crema',
-    weight: '70–90 g',
-    price: '€0.70',
-    desc: 'Uova di anatra Anatramuta — grandi e saporite.',
-    img: 'immagini/anatra.jpg'
-  },
-  {
-    name: 'Oca',
-    color: 'Bianco crema',
-    weight: '150–200 g',
-    price: '€0.70',
-    desc: 'Uova di oca — molto grandi, ideali per cucina e pasticceria.',
-    img: 'immagini/oca.jpg'
-  }
-];
+<section id="order" class="card">
+  <h2>Ordina ora</h2>
+  <form id="order-form">
+    <label>Nome
+      <input type="text" name="name" required />
+    </label>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+    <label>Telefono (WhatsApp)
+      <input type="tel" name="phone" />
+    </label>
+    <label>Ordine (es. 6 x Araucana, 12 x Libornense)
+      <textarea name="order" rows="3" required></textarea>
+    </label>
+    <button type="submit">Invia ordine</button>
+  </form>
+  <p class="small">La consegna è <strong>gratis</strong> e le confezioni standard sono 14 uova a 10 €.</p>
+</section>
