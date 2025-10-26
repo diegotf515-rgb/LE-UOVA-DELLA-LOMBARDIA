@@ -1,75 +1,106 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Uova di Lombardia — Huevos naturales</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap">
-      <h1>Uova di Lombardia</h1>
-      <p class="tag">Huevos frescos de gallinas criadas en libertad · Recinto 3.000 m² · Milano</p>
-    </div>
-  </header>
+<!-- Header -->
+<h1>Uova di Lombardia</h1>
+<p class="tag">Uova fresche da galline allevate libere · Recinto di 3.000 m² · Milano</p>
 
-  <main class="wrap">
-    <section id="hero" class="card">
-      <h2>Huevos naturales, de gallinas felices</h2>
-      <p>Gallinas que pastorean en recintos amplios (3.000 m²), comen hierba y viven sin estrés. Precio: <strong>€0.70 por huevo</strong>.</p>
-    </section>
+<!-- Hero -->
+<h2>Uova naturali da galline felici</h2>
+<p>Galline allevate libere, alimentate 100% biologico. Uova dai colori unici e dal tuorlo intenso.</p>
 
-    <section id="galine" class="card">
-      <h2>Galine — Nuestras razas</h2>
-      <p>Cada raza con su color y rango de peso del huevo.</p>
-      <div class="grid" id="breed-list">
-        <!-- Razas generadas por script -->
-      </div>
-    </section>
+<!-- Sezione Galine -->
+<h2>Galine — Le nostre razze</h2>
+<p>Ogni razza con il suo colore e il peso dell'uovo.</p>
 
-    <section id="others" class="card">
-      <h2>Otros huevos</h2>
-      <div class="grid" id="other-list">
-        <!-- Patos / Oca / Quaglie generados por script -->
-      </div>
-    </section>
+<!-- Altri uova -->
+<h2>Altri uova</h2>
 
-    <section id="order" class="card">
-      <h2>Hacer un pedido</h2>
-      <p>Selecciona los huevos y envíanos un mensaje por WhatsApp o correo.</p>
+<!-- Sezione ordini -->
+<h2>Effettua un ordine</h2>
+<p>Seleziona le uova e inviaci un messaggio tramite WhatsApp o email.</p>
+<label>Nome
+  <input type="text" name="name" required />
+</label>
+<label>Telefono (WhatsApp)
+  <input type="tel" name="phone" />
+</label>
+<label>Ordine (es. 6 x Araucana, 12 x Libornense)
+  <textarea name="order" rows="3" required></textarea>
+</label>
+<button type="submit">Invia ordine</button>
 
-      <form id="order-form">
-        <label>Nombre
-          <input type="text" name="name" required />
-        </label>
+<p class="small">Oppure invia un WhatsApp diretto: <a id="whatsapp-link" href="#">Apri WhatsApp</a></p>
 
-        <label>Teléfono (WhatsApp)
-          <input type="tel" name="phone" />
-        </label>
+<!-- Chi siamo -->
+<h2>Chi siamo</h2>
+<p>Situati in Lombardia (Milano). Galline allevate 100% all'aperto in un recinto di 3.000 m², pascolano tutto il giorno e ricevono alimentazione naturale per una vita senza stress.</p>
 
-        <label>Pedido (ej. 6 x Araucana, 12 x Libornense)
-          <textarea name="order" rows="3" required></textarea>
-        </label>
+<!-- Footer -->
+<p>Uova di Lombardia — Milano · Prezzo: €0.70 per uovo · <small>Testi e immagini di esempio. Aggiorna contatti prima di pubblicare.</small></p>
+const breeds = [
+  {
+    name: 'Mara',
+    color: 'Cioccolato scuro',
+    weight: '60–65 g',
+    price: '€0.70',
+    desc: 'Gallina Mara — Uova cioccolato scuro, allevate libere e felici.',
+    img: 'immagini/mara.jpg'
+  },
+  {
+    name: 'Libornense',
+    color: 'Bianco',
+    weight: '55–60 g',
+    price: '€0.70',
+    desc: 'Gallina Libornense — Uova bianche, allevate all’aperto.',
+    img: 'immagini/libornense.jpg'
+  },
+  {
+    name: 'Araucana',
+    color: 'Blu',
+    weight: '50–60 g',
+    price: '€0.70',
+    desc: 'Gallina Araucana — Uova blu, allevate libere e felici.',
+    img: 'immagini/arau.jpg'
+  },
+  {
+    name: 'Egger',
+    color: 'Verde oliva',
+    weight: '50–60 g',
+    price: '€0.70',
+    desc: 'Gallina Egger — Incrocio Mara × Araucana, uova verde oliva.',
+    img: 'immagini/egger.jpg'
+  },
+  {
+    name: 'Australop',
+    color: 'Blu non chiaro',
+    weight: '55–60 g',
+    price: '€0.70',
+    desc: 'Gallina Australop — Uova bluastre, allevate all’aperto.',
+    img: 'immagini/australop.jpg'
+  }
+];
 
-        <button type="submit">Enviar pedido por correo</button>
-      </form>
-
-      <p class="small">O envía un WhatsApp directo: <a id="whatsapp-link" href="#">Abrir WhatsApp</a></p>
-    </section>
-
-    <section id="about" class="card">
-      <h2>Sobre nosotros</h2>
-      <p>Ubicados en Lombardia (Milano). Gallinas 100% criadas al aire libre en un recinto de 3.000 m², pastan todo el día y reciben alimentación natural y cuidados para una vida sin estrés.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>Uova di Lombardia — Milano · Precio: €0.70 por huevo · <small>Textos e imágenes de ejemplo. Actualiza contacto antes de publicar.</small></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+const others = [
+  {
+    name: 'Quaglie',
+    color: 'Crema con puntini neri',
+    weight: '10–12 g',
+    price: '€0.70',
+    desc: 'Uova di quaglie — piccole e delicate.',
+    img: 'immagini/quaglia.jpg'
+  },
+  {
+    name: 'Anatramuta',
+    color: 'Bianco crema',
+    weight: '70–90 g',
+    price: '€0.70',
+    desc: 'Uova di anatra Anatramuta — grandi e saporite.',
+    img: 'immagini/anatra.jpg'
+  },
+  {
+    name: 'Oca',
+    color: 'Bianco crema',
+    weight: '150–200 g',
+    price: '€0.70',
+    desc: 'Uova di oca — molto grandi, ideali per cucina e pasticceria.',
+    img: 'immagini/oca.jpg'
+  }
+];
