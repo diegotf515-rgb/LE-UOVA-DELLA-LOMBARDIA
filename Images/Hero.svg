@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+  <rect width="1600" height="600" fill="#e8f5e9"/>
+  <path d="M0 420 C 300 320, 500 500, 800 420 S 1300 320, 1600 440 L 1600 600 L 0 600 Z" fill="#c8e6c9"/>
+  <text x="80" y="160" font-family="Georgia, serif" font-size="72" fill="#1b5e20">Uova di Lombardia</text>
+  <text x="80" y="220" font-family="Georgia, serif" font-size="28" fill="#2e7d32">Galline libere · 100% biologico · Milano</text>
+</svg>
