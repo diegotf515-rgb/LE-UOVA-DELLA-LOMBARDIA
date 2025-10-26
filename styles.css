@@ -21,3 +21,16 @@ footer{padding:28px 0;background:#e8f5e9;color:#1b5e20;margin-top:40px}
 .small{font-size:.9rem;color:#607d8b}
 @media (max-width:800px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
 
+a.btn {
+  text-decoration: none;
+  background: #2e7d32;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(46,125,50,.3);
+}
+
+a.btn:hover {
+  background: #1b5e20;
+}
