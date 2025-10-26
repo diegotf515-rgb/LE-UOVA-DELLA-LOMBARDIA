@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uova di Lombardia — Huevos naturales</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Uova di Lombardia</h1>
+      <p class="tag">Huevos frescos de gallinas criadas en libertad · Recinto 3.000 m² · Milano</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="hero" class="card">
+      <h2>Huevos naturales, de gallinas felices</h2>
+      <p>Gallinas que pastorean en recintos amplios (3.000 m²), comen hierba y viven sin estrés. Precio: <strong>€0.70 por huevo</strong>.</p>
+    </section>
+
+    <section id="galine" class="card">
+      <h2>Galine — Nuestras razas</h2>
+      <p>Cada raza con su color y rango de peso del huevo.</p>
+      <div class="grid" id="breed-list">
+        <!-- Razas generadas por script -->
+      </div>
+    </section>
+
+    <section id="others" class="card">
+      <h2>Otros huevos</h2>
+      <div class="grid" id="other-list">
+        <!-- Patos / Oca / Quaglie generados por script -->
+      </div>
+    </section>
+
+    <section id="order" class="card">
+      <h2>Hacer un pedido</h2>
+      <p>Selecciona los huevos y envíanos un mensaje por WhatsApp o correo.</p>
+
+      <form id="order-form">
+        <label>Nombre
+          <input type="text" name="name" required />
+        </label>
+
+        <label>Teléfono (WhatsApp)
+          <input type="tel" name="phone" />
+        </label>
+
+        <label>Pedido (ej. 6 x Araucana, 12 x Libornense)
+          <textarea name="order" rows="3" required></textarea>
+        </label>
+
+        <button type="submit">Enviar pedido por correo</button>
+      </form>
+
+      <p class="small">O envía un WhatsApp directo: <a id="whatsapp-link" href="#">Abrir WhatsApp</a></p>
+    </section>
+
+    <section id="about" class="card">
+      <h2>Sobre nosotros</h2>
+      <p>Ubicados en Lombardia (Milano). Gallinas 100% criadas al aire libre en un recinto de 3.000 m², pastan todo el día y reciben alimentación natural y cuidados para una vida sin estrés.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Uova di Lombardia — Milano · Precio: €0.70 por huevo · <small>Textos e imágenes de ejemplo. Actualiza contacto antes de publicar.</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
