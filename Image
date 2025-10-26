@@ -1,0 +1,20 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#d9f3d2"/>
+  <ellipse cx="400" cy="370" rx="400" ry="50" fill="#bde0a0"/>
+  <rect x="0" y="200" width="800" height="200" fill="#c9ebb8"/>
+  <rect x="200" y="220" width="400" height="120" fill="#f2deb8" stroke="#a87c4f" stroke-width="3"/>
+  <line x1="200" y1="220" x2="200" y2="340" stroke="#a87c4f" stroke-width="5"/>
+  <line x1="600" y1="220" x2="600" y2="340" stroke="#a87c4f" stroke-width="5"/>
+  <circle cx="300" cy="310" r="22" fill="#fff" stroke="#444" stroke-width="2"/>
+  <circle cx="500" cy="320" r="25" fill="#fff" stroke="#444" stroke-width="2"/>
+  <ellipse cx="280" cy="325" rx="45" ry="25" fill="#f8f1da"/>
+  <ellipse cx="520" cy="335" rx="45" ry="25" fill="#f8f1da"/>
+  <circle cx="295" cy="310" r="8" fill="#222"/>
+  <circle cx="495" cy="315" r="8" fill="#222"/>
+  <text x="400" y="80" font-size="36" text-anchor="middle" fill="#2e5532" font-family="Georgia, serif">
+    Uova di Lombardia
+  </text>
+  <text x="400" y="120" font-size="20" text-anchor="middle" fill="#3b672e" font-family="Georgia, serif">
+    Galline felici in un recinto verde
+  </text>
+</svg>
