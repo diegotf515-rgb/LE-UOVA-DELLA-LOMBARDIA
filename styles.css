@@ -36,8 +36,19 @@ a.btn:hover {
 }
 /* --- Fondo principal atardecer granja --- */
 .hero{
-  /* Forzamos el fondo en una sola declaración */
-  background: url("images/fondo-granja.jpg") center / cover no-repeat !important;
+/* oscurecer un poquito para que el texto se lea mejor */
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.25);
+}
+
+.hero-content{
+  position: relative; z-index:1;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 2px 6px rgba(0,0,0,.5);
+}
 
   /* Estilos del texto */
   color:#fff;
