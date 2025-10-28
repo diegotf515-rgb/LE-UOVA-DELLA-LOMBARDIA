@@ -72,6 +72,71 @@
       background-color: #1b5e20;
     }
   </style>
+</head><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uova di Lombardia – Galline felici</title>
+
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 👇 Pega aquí dentro tus estilos -->
+  <style>
+    .breed-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      background: linear-gradient(to bottom, #fff8e1, #ffecb3); /* amarillo suave */
+    }
+
+    .breed-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .breed-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .breed-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .breed-card h3 {
+      color: #2e7d32; /* verde profesional */
+      margin-top: 0.8rem;
+      font-size: 1.3rem;
+    }
+
+    .breed-card p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #2e7d32;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #1b5e20;
+    }
+  </style>
 </head>
 }
 <body>
