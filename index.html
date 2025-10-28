@@ -371,25 +371,19 @@
 </footer>
 
 <script>
-// METTI IL TUO NUMERO (senza +), es: 39333111222
-const WHATSAPP_NUMBER = "39XXXXXXXXXX";
+<script>
+  function waOrder(btn) {
+    const card = btn.closest('.card');
+    const breed = card.dataset.breed || card.querySelector('h3').innerText.trim();
+    const qty = card.querySelector('select').value;
 
-const form = document.getElementById('orderForm');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(form).entries());
-  const text = `Nuovo ordine%0A---%0ANome: ${encodeURIComponent(data.nome)}%0AEmail: ${encodeURIComponent(data.email||'')}%0ATelefono: ${encodeURIComponent(data.tel)}%0AProdotto: ${encodeURIComponent(data.ordine)}%0AIndirizzo: ${encodeURIComponent(data.indirizzo)}%0ANote: ${encodeURIComponent(data.note||'')}`;
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
-  window.open(url, '_blank');
-});
-un
-document.getElementById('mailBtn').addEventListener('click', () => {
-  const data = Object.fromEntries(new FormData(form).entries());
-  const subject = `Ordine uova — ${data.nome}`;
-  const body = `Nuovo ordine:\n\nNome: ${data.nome}\nTelefono: ${data.tel}\nEmail: ${data.email||''}\nProdotto: ${data.ordine}\nIndirizzo: ${data.indirizzo}\nNote: ${data.note||''}`;
-  window.location.href = `mailto:info@tua-azienda.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+    // 👇 Cambia este número por tu número de WhatsApp con prefijo de país (sin +)
+    const phone = "+393276167577"; // Ejemplo: 393331234567
+
+    const text = Ciao! Vorrei ordinare ${qty} uova di ${breed} dal sito.;
+    const url = https://wa.me/${phone}?text=${encodeURIComponent(text)};
+    window.open(url, '_blank');
+  }
 </script>
 </body>
 </html>
-
