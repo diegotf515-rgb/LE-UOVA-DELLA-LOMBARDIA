@@ -121,59 +121,66 @@
   <!-- 👇 Pega aquí dentro tus estilos -->
   <style>
     .breed-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      background: linear-gradient(to bottom, #fff8e1, #ffecb3); /* amarillo suave */
-    }
+     /* === Cards razze + ordine === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
-    .breed-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      text-align: center;
-      padding: 1rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+.card {
+  background: #ffffffee;
+  backdrop-filter: blur(2px);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.10);
+}
 
-    .breed-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    }
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: .6rem;
+}
 
-    .breed-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.card h3 {
+  margin: .2rem 0 .4rem 0;
+}
 
-    .breed-card h3 {
-      color: #2e7d32; /* verde profesional */
-      margin-top: 0.8rem;
-      font-size: 1.3rem;
-    }
+.card p {
+  margin: 0 0 .6rem 0;
+}
 
-    .breed-card p {
-      color: #444;
-      font-size: 0.95rem;
-    }
+.order {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: .4rem;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 0.6rem;
-      padding: 0.5rem 1.2rem;
-      background-color: #2e7d32;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.order label {
+  font-weight: 600;
+}
 
-    .btn:hover {
-      background-color: #1b5e20;
- }     
+.order select {
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-order {
+  background: #2e7d32;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: .5rem .9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-order:hover { background:#1b5e20; }
   body {
   margin: 0;
  background-image: url("images/fondo-granjagp.jpg");
@@ -187,6 +194,66 @@
 </head>
 }
 <body>
+  <section id="ordina">
+  <h2>Le nostre razze</h2>
+
+  <div class="cards">
+
+    <!-- LIVORNESE -->
+    <article class="card" data-breed="Livornese (Leghorn)">
+      <img src="images/livornese.jpg" alt="Gallina Livornese">
+      <h3>Livornese (Leghorn)</h3>
+      <p>Razza ovaiole leggera. Uova bianche, 250–320 uova/anno. Inizio deposizione: 4,5–5 mesi.</p>
+      <div class="order">
+        <label for="qty-livornese">Quantità</label>
+        <select id="qty-livornese">
+          <!-- 1..20 -->
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+        </select>
+        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
+      </div>
+    </article>
+
+    <!-- MARANS -->
+    <article class="card" data-breed="Marans">
+      <img src="images/marans.jpg" alt="Gallina Marans">
+      <h3>Marans</h3>
+      <p>Doppio uso. Uova “cioccolato”, 150–200 uova/anno. Tuorli intensi, rustica.</p>
+      <div class="order">
+        <label for="qty-marans">Quantità</label>
+        <select id="qty-marans">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+        </select>
+        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
+      </div>
+    </article>
+
+    <!-- ARAUCANA -->
+    <article class="card" data-breed="Araucana">
+      <img src="images/araucana.jpg" alt="Gallina Araucana">
+      <h3>Araucana</h3>
+      <p>Uova azzurre/verde. 150–200 uova/anno. Ottima al pascolo, ornamentale.</p>
+      <div class="order">
+        <label for="qty-araucana">Quantità</label>
+        <select id="qty-araucana">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+        </select>
+        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+  
 .
 <div class="breed-card">
   <figure class="breed-figure">
