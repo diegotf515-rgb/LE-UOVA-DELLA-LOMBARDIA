@@ -24,7 +24,45 @@
       padding: 2rem;
       background: linear-gradient(to bottom, #fff8e1, #ffecb3);
     }
+/* --- Bloques de cada raza --- */
+.breed-card {
+  background: #ffffffcc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
 
+.breed-figure {
+  position: relative;
+  margin: 0;
+}
+
+.breed-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.breed-name {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.breed-specs {
+  margin-top: 0.8rem;
+  padding-left: 1rem;
+}
+
+.breed-specs li {
+  margin: 4px 0;
+}
     .breed-card {
       background: rgba(255, 255, 255, 0.9);
       border-radius: 15px;
@@ -150,12 +188,42 @@
 }
 <body>
 .
+  <div class="breed-card">
+  <figure class="breed-figure">
+    <img src="images/livornese.jpg" alt="Gallina Livornese" class="breed-img">
+    <figcaption class="breed-name">Livornese (Leghorn)</figcaption>
+  </figure>
+  <ul class="breed-specs">
+    <li><strong>Tipología:</strong> Gallina ponedora</li>
+    <li><strong>Huevos/año:</strong> 250–320</li>
+    <li><strong>Color del huevo:</strong> Blanco</li>
+    <li><strong>Peso del huevo:</strong> 55–60 g</li>
+    <li><strong>Inicio de puesta:</strong> 4.5–5 meses</li>
+    <li><strong>Incubación:</strong> 21 días</li>
+    <li><strong>Peso adulto:</strong> 1.8–2.5 kg</li>
+  </ul>
+</div>
 }
   <div class="breed-card">
     <img src="images/livornese.jpg" alt="Gallina Livornese" class="breed-img">
     <h3>Gallina Livornese</h3>
     <p>Huevos blancos – Italia</p>
     <a href="livornese.html" class="btn">Ver detalles</a>
+    <div class="breed-card">
+  <figure class="breed-figure">
+    <img src="images/marans.jpg" alt="Gallina Marans" class="breed-img">
+    <figcaption class="breed-name">Marans</figcaption>
+  </figure>
+  <ul class="breed-specs">
+    <li><strong>Tipología:</strong> Doble propósito (carne y huevos)</li>
+    <li><strong>Huevos/año:</strong> 150–200</li>
+    <li><strong>Color del huevo:</strong> Marrón muy oscuro</li>
+    <li><strong>Peso del huevo:</strong> 60–65 g</li>
+    <li><strong>Inicio de puesta:</strong> 6–7 meses</li>
+    <li><strong>Incubación:</strong> 21 días</li>
+    <li><strong>Peso adulto:</strong> 2.5–3.5 kg</li>
+  </ul>
+</div>
   </div>
 </section>
 <main class="container">
