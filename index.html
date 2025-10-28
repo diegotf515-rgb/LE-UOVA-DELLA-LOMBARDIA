@@ -10,9 +10,12 @@
 </head>
 <body>
 
-<header class="hero">
-  <img class="media" src="images/hero-corral-2.svg" alt="Galline felici in un recinto verde">
-</header>
+<section class="hero">
+  <h1>Uova naturali da galline felici</h1>
+  <p>Uova dai gusci colorati e tuorli intensi. Consegna gratuita a Milano.</p>
+  <button>Ordina ora</button>
+  <button>Le razze</button>
+</section>
 <main class="container">
   <section>
     <span class="badge">100% biologico</span>
@@ -108,7 +111,7 @@ form.addEventListener('submit', (e) => {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
   window.open(url, '_blank');
 });
-
+un
 document.getElementById('mailBtn').addEventListener('click', () => {
   const data = Object.fromEntries(new FormData(form).entries());
   const subject = `Ordine uova — ${data.nome}`;
