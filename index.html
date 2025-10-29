@@ -216,35 +216,11 @@ height: 100vh;
 <section id="ordina">
   <h2>Le nostre razze</h2>
 
-  <div class="cards">
-
-    <!-- LIVORNESE -->
-    <article class="card">
-      <img src="images/livornese.jpg" alt="Gallina Livornese">
-      <h3>Livornese (Leghorn)</h3>
-      <p>Razza ovaiole leggera. Uova bianche, 250–320 uova/anno. Inizio deposizione: 4,5–5 mesi.</p>
-    </article>
-
-    <!-- MARANS -->
-    <article class="card">
-      <img src="images/marans.jpg" alt="Gallina Marans">
-      <h3>Marans</h3>
-      <p>Doppio uso. Uova “cioccolato”, 150–200 uova/anno. Tuorli intensi, rustica.</p>
-    </article>
-
-    <!-- ARAUCANA -->
-    <article class="card">
-      <img src="images/araucana.jpg" alt="Gallina Araucana">
-      <h3>Araucana</h3>
-      <p>Uova azzurre o verdi. 150–200 uova/anno. Ottima al pascolo e ornamentale.</p>
-    </article>
 
   </div>
 </section>
 }
-
-
-  position: relative; z-index:1;
+position: relative; z-index:1;
   color:#fff;
   text-align:center;
   text-shadow:0 2px 6px rgba(0,0,0,.5);
@@ -268,93 +244,15 @@ height: 100vh;
   <section id="ordina">
   <h2>Le nostre razze</h2>
 
-  <div class="cards">
-
-    <!-- LIVORNESE -->
-    <article class="card" data-breed="Livornese (Leghorn)">
-      <img src="images/livornese.jpg" alt="Gallina Livornese">
-      <h3>Livornese (Leghorn)</h3>
-      <p>Razza ovaiole leggera. Uova bianche, 250–320 uova/anno. Inizio deposizione: 4,5–5 mesi.</p>
-      <div class="order">
-        <label for="qty-livornese">Quantità</label>
-        <select id="qty-livornese">
-          <!-- 1..20 -->
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-        </select>
-        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
-      </div>
-    </article>
-
-    <!-- MARANS -->
-    <article class="card" data-breed="Marans">
-      <img src="images/marans.jpg" alt="Gallina Marans">
-      <h3>Marans</h3>
-      <p>Doppio uso. Uova “cioccolato”, 150–200 uova/anno. Tuorli intensi, rustica.</p>
-      <div class="order">
-        <label for="qty-marans">Quantità</label>
-        <select id="qty-marans">
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-        </select>
-        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
-      </div>
-    </article>
-
-    <!-- ARAUCANA -->
-    <article class="card" data-breed="Araucana">
-      <img src="images/araucana.jpg" alt="Gallina Araucana">
-      <h3>Araucana</h3>
-      <p>Uova azzurre/verde. 150–200 uova/anno. Ottima al pascolo, ornamentale.</p>
-      <div class="order">
-        <label for="qty-araucana">Quantità</label>
-        <select id="qty-araucana">
-          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-          <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-          <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-        </select>
-        <button class="btn-order" onclick="waOrder(this)">Ordina</button>
-      </div>
-    </article>
+  
 
   </div>
 </section>
   
 .
-<div class="breed-card">
-  <figure class="breed-figure">
-    <img src="images/livornese.jpg" alt="Gallina Livornese" class="breed-img">
-    <figcaption class="breed-name">Livornese (Leghorn)</figcaption>
-  </figure>
-  <ul class="breed-specs">
-    <li><strong>Tipologia:</strong> Gallina ovaiole</li>
-    <li><strong>Uova/anno:</strong> 250–320</li>
-    <li><strong>Colore dell’uovo:</strong> Bianco</li>
-    <li><strong>Peso dell’uovo:</strong> 55–60 g</li>
-    <li><strong>Inizio deposizione:</strong> 4,5–5 mesi</li>
-    <li><strong>Incubazione:</strong> 21 giorni</li>
-    <li><strong>Peso adulto:</strong> 1,8–2,5 kg</li>
+
   </ul>
-</div>
-}
- <div class="breed-card">
-  <figure class="breed-figure">
-    <img src="images/livornese.jpg" alt="Gallina Livornese" class="breed-img">
-    <figcaption class="breed-name">Livornese (Leghorn)</figcaption>
-  </figure>
-  <ul class="breed-specs">
-    <li><strong>Tipologia:</strong> Gallina ovaiole</li>
-    <li><strong>Uova/anno:</strong> 250–320</li>
-    <li><strong>Colore dell’uovo:</strong> Bianco</li>
-    <li><strong>Peso dell’uovo:</strong> 55–60 g</li>
-    <li><strong>Inizio deposizione:</strong> 4,5–5 mesi</li>
-    <li><strong>Incubazione:</strong> 21 giorni</li>
-    <li><strong>Peso adulto:</strong> 1,8–2,5 kg</li>
+
   </ul>
 </div>
 </section>
@@ -369,21 +267,7 @@ height: 100vh;
     </div>
   </section>
 
-  <section id="razze">
-    <h2>Le nostre razze</h2>
-    <section id="razze">
-  <h2>Le nostre razze</h2>
-  <div class="grid cols-3">
-    <div class="card">
-      <img src="images/araucana-with-egg.svg" alt="Gallina Araucana e uovo azzurro" style="width:100%;border-radius:12px">
-      <h3>Araucana</h3>
-      <p>Uova azzurre · rustica · ottima al pascolo.</p>
-    </div>
-    <div class="card">
-      <img src="images/marans-with-egg.svg" alt="Gallina Marans e uovo cioccolato" style="width:100%;border-radius:12px">
-      <h3>Marans</h3>
-      <p>Uova cioccolato · tuorli intensi · robuste.</p>
-    </div>
+  
     <div class="card">
       <img src="images/eggs.svg" alt="Uova colorate" style="width:100%;border-radius:12px">
       <h3>Uova miste</h3>
