@@ -250,17 +250,21 @@ height: 100vh;
       </p>
     </div>
 
-  <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%;">
+  <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; position:relative; display:inline-block;">
   <h3 style="color:#2f5d2f; margin-bottom:10px;">Olive Egger</h3>
 
-  <!-- Imagen de la gallina -->
-  <img src="images/Olive%20Egger.jpg" alt="Gallina Olive Egger"
-       style="width:220px; border-radius:12px; margin-bottom:12px;">
+  <!-- Contenedor de imagen principal -->
+  <div style="position:relative; display:inline-block;">
+    <!-- Imagen de la gallina -->
+    <img src="images/Olive%20Egger.jpg" alt="Gallina Olive Egger"
+         style="width:220px; border-radius:12px;">
 
-  <p style="font-size:0.95em; color:#444; line-height:1.4;">
-    Colore verde oliva · Origine: Svizzera · Ottima resistenza al freddo.
-  </p>
-</div>
+    <!-- Imagen pequeña del huevo, circular -->
+    <img src="images/uova%20Olive%20Egger.jpg" alt="Uovo Olive Egger"
+         style="width:70px; height:70px; border-radius:50%; 
+                position:absolute; top:10px; right:10px; 
+                border:3px solid white; box-shadow:0 0 5px rgba(0,0,0,0.3);">
+  </div>
 
     <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
       <h3 style="color:#2f5d2f; margin-bottom:10px;">Olive Egger</h3>
