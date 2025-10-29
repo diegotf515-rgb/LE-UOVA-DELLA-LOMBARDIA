@@ -194,6 +194,30 @@
 </head>
 }
 <body>
+  /* Fondo principal (hero) */
+.hero{
+  background: url("images/fondo-granjagp.jpg") center / cover no-repeat fixed !important;
+  min-height: 60vh;            /* alto de la franja */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+/* oscurecer un poquito para que el texto se lea mejor */
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.25);
+}
+
+.hero-content{
+  position: relative; z-index:1;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 2px 6px rgba(0,0,0,.5);
+}
   <section id="ordina">
   <h2>Le nostre razze</h2>
 
