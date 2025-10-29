@@ -34,8 +34,7 @@ a.btn {
 a.btn:hover {
   background: #1b5e20;
 }
-/* Fondo principal (hero) */
-.hero {
+hero {
   background: url("images/fondo-granjagp.jpg") center / cover no-repeat fixed !important;
   min-height: 100vh;
   display: flex;
@@ -44,6 +43,7 @@ a.btn:hover {
   padding: 3rem 1rem;
   position: relative;
 }
+
 
 .hero::after {
   content: "";
