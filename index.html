@@ -219,27 +219,37 @@ height: 100vh;
     <p>Uova naturali da galline felici • Consegna a Milano</p>
   </div>
 </header>
-  ...
-background-attachment: fixed; /* para que se vea fijo al hacer scroll */
-height: 100vh;
+<section id="ordina">
+  <h2>Le nostre razze</h2>
+
+  <div class="cards">
+
+    <!-- LIVORNESE -->
+    <article class="card">
+      <img src="images/livornese.jpg" alt="Gallina Livornese">
+      <h3>Livornese (Leghorn)</h3>
+      <p>Razza ovaiole leggera. Uova bianche, 250–320 uova/anno. Inizio deposizione: 4,5–5 mesi.</p>
+    </article>
+
+    <!-- MARANS -->
+    <article class="card">
+      <img src="images/marans.jpg" alt="Gallina Marans">
+      <h3>Marans</h3>
+      <p>Doppio uso. Uova “cioccolato”, 150–200 uova/anno. Tuorli intensi, rustica.</p>
+    </article>
+
+    <!-- ARAUCANA -->
+    <article class="card">
+      <img src="images/araucana.jpg" alt="Gallina Araucana">
+      <h3>Araucana</h3>
+      <p>Uova azzurre o verdi. 150–200 uova/anno. Ottima al pascolo e ornamentale.</p>
+    </article>
+
+  </div>
+</section>
 }
 
-/* 🔹 Fondo principal (hero) 🔹 */
-.hero{
-  background: url("images/fondo-granjagp.jpg") center / cover no-repeat fixed !important;
-  min-height: 100vh; /* ocupa toda la pantalla */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1rem;
-  position: relative;
-}
-.hero::after{
-  content:"";
-  position:absolute; inset:0;
-  background: rgba(0,0,0,.25);
-}
-.hero-content{
+
   position: relative; z-index:1;
   color:#fff;
   text-align:center;
