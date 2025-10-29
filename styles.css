@@ -34,20 +34,30 @@ a.btn {
 a.btn:hover {
   background: #1b5e20;
 }
-/* --- Fondo principal atardecer granja --- */
-.hero{
-/* oscurecer un poquito para que el texto se lea mejor */
-.hero::after{
-  content:"";
-  position:absolute; inset:0;
-  background: rgba(0,0,0,.25);
+/* Fondo principal (hero) */
+.hero {
+  background: url("images/fondo-granjagp.jpg") center / cover no-repeat fixed !important;
+  min-height: 100vh;             /* 🔹 esto hace que ocupe toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  position: relative;
 }
 
-.hero-content{
-  position: relative; z-index:1;
-  color:#fff;
-  text-align:center;
-  text-shadow:0 2px 6px rgba(0,0,0,.5);
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* 🔹 un filtro oscuro suave para que se vea el texto */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
   /* Estilos del texto */
