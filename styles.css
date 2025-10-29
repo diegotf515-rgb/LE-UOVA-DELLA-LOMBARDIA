@@ -70,3 +70,61 @@ a.btn:hover {
   border-radius:0 0 25px 25px;
   min-height:90vh;
   }
+/* === Cards razze === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #ffffffcc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  backdrop-filter: blur(2px);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: .6rem;
+}
+
+.card h3 {
+  margin: .3rem 0;
+  color: #2e7d32;
+}
+
+.card p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card select, .card button {
+  margin-top: .5rem;
+  padding: .4rem .8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #1b5e20;
+}
