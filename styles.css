@@ -44,6 +44,7 @@ a.btn:hover {
   padding: 3rem 1rem;
   position: relative;
 }
+(margin-top: -100px; /* sposta il testo più in alto */)
 
 .hero::after {
   content: "";
