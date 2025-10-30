@@ -220,7 +220,15 @@ height: 100vh;
   <h2 style="text-align: center; color: #2f5d2f; font-size: 2.2rem; margin-bottom: 40px;">
     Le nostre galline
   </h2>
-
+<div style="
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(340px,1fr));
+  gap:30px;
+  justify-items:center;
+  align-items:start;
+  max-width:1200px;
+  margin:0 auto;
+">
 <!-- CARD: Gallina Araucana -->
 <div style="background-color:#f8f8f8; border:3px solid #94c47d; border-radius:20px; padding:25px; text-align:center; width:100%; max-width:340px; min-height:520px; overflow:hidden; box-shadow:0 3px 6px rgba(0,0,0,0.1);">
 
@@ -312,8 +320,9 @@ height: 100vh;
       </p>
     </div>
   </div>
-   
+   </div> <!-- cierre del grid -->
 </section>
+</section> 
 
 </header>
 <section id="ordina">
