@@ -229,12 +229,29 @@ height: 100vh;
     max-width: 1100px;
     margin: 0 auto;
   ">
-    <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-      <h3 style="color:#2f5d2f; margin-bottom:10px;">Gallina Araucana</h3>
-      <p style="font-size:0.95rem; color:#444; line-height:1.4;">
-        Uova azzurre · Origine: Sud America · Razza rustica e docile.
-      </p>
-    </div>
+    <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; position:relative; display:inline-block; margin-top:25px;">
+  <h3 style="color:#2f5d2f; margin-bottom:10px;">Gallina Araucana</h3>
+
+  <!-- Imagen principal -->
+  <div style="position:relative; display:inline-block;">
+    <img src="images/araucana.jpg" alt="Gallina Araucana"
+         style="width:220px; border-radius:12px;">
+         
+    <!-- Imagen del huevo en círculo, abajo a la derecha -->
+    <img src="images/uova%20araucana.jpg" alt="Uovo Araucana"
+         style="width:70px; height:70px; border-radius:50%;
+                position:absolute; bottom:10px; right:10px;
+                border:3px solid white; box-shadow:0 0 5px rgba(0,0,0,0.3);">
+  </div>
+
+  <!-- Descripción ordenada -->
+  <table style="margin: 0 auto; font-size:0.95em; color:#444; line-height:1.8; margin-top:10px;">
+    <tr><td style="text-align:right; padding-right:8px;"><strong>Colore dell’uovo:</strong></td><td>azzurro chiaro</td></tr>
+    <tr><td style="text-align:right; padding-right:8px;"><strong>Peso uovo:</strong></td><td>50–55 g</td></tr>
+    <tr><td style="text-align:right; padding-right:8px;"><strong>Origine:</strong></td><td>Cile</td></tr>
+    <tr><td style="text-align:right; padding-right:8px;"><strong>Carattere:</strong></td><td>rustica e docile</td></tr>
+  </table>
+</div>
 
     <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
       <h3 style="color:#2f5d2f; margin-bottom:10px;">Gallina Marans</h3>
@@ -284,7 +301,7 @@ height: 100vh;
   </div>
 
     <div style="background-color:#f8f8f8; border-radius:16px; padding:25px; text-align:center; width:100%; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-      <h3 style="color:#2f5d2f; margin-bottom:10px;">Olive Egger</h3>
+      <h3 style="color:#2f5d2f; margin-bottom:10px;"> </h3>
       <p style="font-size:0.95rem; color:#444; line-height:1.4;">
              * colore:  verde oliva
         <br> * Peso :   uovo
