@@ -573,5 +573,76 @@ Ordine minimo 14 uova (confezione da €10) – consegna gratuita a Milano.
     window.open(url, '_blank');
   }
 </script>
+  [10:05, 01/11/2025] diegotf515: <span class="badge">Fattoria Artigianale</span>
+
+<h1 style="font-size:52px; font-weight:900; color:#1b5e20; text-shadow:0 3px 8px rgba(0,0,0,0.25);">
+La Fattoria dell’Uovo Naturale
+</h1>
+
+<p style="max-width:850px; font-size:20px; line-height:1.6; color:#444; margin:15px auto; text-align:center;">
+Alleviamo galline libere nei campi di Morimondo (MI), alimentate con granaglie naturali,
+mais, farro e verdure fresche (carote, peperoni, insalata).  
+Ogni giorno pascolano all'aperto sulla nostra erba, immersa nella natura lombarda.
+<br><br>
+Senza antibiotici, senza fretta — solo benessere animale e rispetto della natura.
+<br><br>
+Consegniamo uova fresche due volte a settimana (martedì e venerdì).  
+Ordine minimo 14 uova (confezione da €10) – consegna gratuita a Milano.
+</p>
+
+<div class="cta" style="margin-top:15px;">
+    <a class="btn" href="#ordina">Ordina ora</a>
+    <a class="btn" href="#razze" style="background:#1b5e20">Le razze</a>
+</div>
+[10:47, 01/11/2025] diegotf515: <section id="pedido" style="padding:30px; background:#f7f7f7; border-radius:12px; margin-top:40px;">
+  <h2 style="text-align:center; margin-bottom:20px;">Haz tu pedido</h2>
+
+  <form id="pedido-form" action="https://formspree.io/f/mmnoobea" method="POST" style="max-width:520px; margin:auto; display:flex; flex-direction:column; gap:12px;">
+    <input type="text" name="name" placeholder="Nombre y Apellido" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <input type="email" name="email" placeholder="Correo electrónico" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <input type="text" name="telefono" placeholder="Número de teléfono" style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <input type="text" name="cantidad" placeholder="Cantidad de huevos (docenas o unidades)" style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <textarea name="mensaje" placeholder="Dirección y notas de entrega" rows="4" style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+
+    <input type="hidden" name="_subject" value="Nuevo pedido de huevos">
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit" style="padding:12px; background:#4CAF50; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
+      Enviar Pedido
+    </button>
+  </form>
+
+  <p id="pedido-ok" style="display:none; color:#2e7d32; text-align:center; margin-top:12px;">✅ Pedido enviado. Te contactaremos pronto.</p>
+  <p id="pedido-error" style="display:none; color:#c62828; text-align:center; margin-top:12px;">❌ Error al enviar. Intenta de nuevo.</p>
+</section>
+
+<script>
+const form = document.getElementById('pedido-form');
+const okMsg = document.getElementById('pedido-ok');
+const errMsg = document.getElementById('pedido-error');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  okMsg.style.display = 'none';
+  errMsg.style.display = 'none';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      okMsg.style.display = 'block';
+    } else {
+      errMsg.style.display = 'block';
+    }
+  } catch {
+    errMsg.style.display = 'block';
+  }
+});
+</script>
 </body>
 </html>
