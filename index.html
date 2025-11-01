@@ -507,59 +507,116 @@ height: 100vh;
   </section>
 </main>
 
+<!-- CARD: Gallina Marans -->
+<div style="background:#f8f8f8; border:3px solid #94c47d; border-radius:20px; padding:20px;
+            width:100%; max-width:346px; min-height:528px; display:flex; flex-direction:column; gap:10px;">
 
+  <h3 style="color:#2f5d2f; margin:0 0 10px; text-align:center;">Gallina Marans</h3>
 
+  <!-- Imagen -->
+  <div style="position:relative; width:100%; height:220px; border-radius:15px; overflow:hidden;">
+    <img src="images/marans.jpg" alt="Gallina Marans"
+         style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
 
+    <img src="images/uovo marans.jpg" alt="Uovo Marans"
+         style="position:absolute; bottom:10px; right:10px; width:68px; height:68px;
+                border-radius:50%; bord…
+<img src="images/legbar.jpg" alt="Gallina Legbar"
+     style="width:100%; height:220px; object-fit:contain; object-position:center; border-radius:15px; display:block;">
+<p><strong>Carattere:</strong> tranquilla, socievole, ottima produttrice</p>
+
+<label style="font-weight:600; display:block; margin-top:10px;">
+  Quantità:
+  <select style="padding:5px; border-radius:5px; border:1px solid #94c47d;">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</label>
+
+</div> <!-- /card Araucana -->
+<!-- Quantità -->
+<label style="font-weight:600; display:block; margin-top:10px;">
+  Quantità:
+  <select style="padding:5px; border-radius:5px; border:1px solid #94c47d;">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</label>
+grid-template-columns: repeat(3, 1fr);
+.breed-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 1rem;
+    min-height: 560px; /* <-- AGREGAR ESTA LÍNEA */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+<span class="badge">100% biologico</span>
+<h1>Uova naturali da galline felici</h1>
+<p class="lead">Uova dai gusci colorati e tuorli intensi. Consegna gratuita a Milano.</p>
+<div class="cta">
+    <a class="btn" href="#ordina">Ordina ora</a>
+    <a class="btn" href="#razze" style="background:#1b5e20">Le razze</a>
 </div>
- <section id="pedido" style="padding:30px; background:#f7f7f7; border-radius:12px; margin-top:40px;">
+<span class="badge">Fattoria Artigianale</span>
+
+<h1 style="font-size:52px; font-weight:900; color:#1b5e20; text-shadow:0 3px 8px rgba(0,0,0,0.25);">
+La Fattoria dell’Uovo Naturale
+</h1>
+
+<p style="max-width:850px; font-size:20px; line-height:1.6; color:#444; margin:15px auto; text-align:center;">
+Alleviamo galline libere nei campi di Morimondo (MI), alimentate con granaglie naturali,
+mais, farro e verdure fresche (carote, peperoni, insalata).  
+Ogni giorno pascolano all'aperto sulla nostra erba, immersa nella natura lombarda.
+<br><br>
+Senza antibiotici, senza fretta — solo benessere animale e rispetto della natura.
+<br><br>
+Consegniamo uova fresche due volte a settimana (martedì e venerdì).  
+Ordine minimo 14 uova (confezione da €10) – consegna gratuita a M…
+<section id="pedido" style="padding:30px; background:#f7f7f7; border-radius:12px; margin-top:40px;">
   <h2 style="text-align:center; margin-bottom:20px;">Haz tu pedido</h2>
 
-  <form id="pedido-form" action=https://formspree.io/f/mnnoobea method="POST" style="max-width:520px; margin:auto; display:flex; flex-direction:column; gap:12px;">
+  <form id="pedido-form" action="https://formspree.io/f/mmnoobea" method="POST" style="max-width:520px; margin:auto; display:flex; flex-direction:column; gap:12px;">
     <input type="text" name="name" placeholder="Nombre y Apellido" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
     <input type="email" name="email" placeholder="Correo electrónico" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
     <input type="text" name="telefono" placeholder="Número de teléfono" style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <input type="text" name="cantidad" placeholder="Cantidad de huevos (docenas o unidades)" style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <textarea name="mensaje" placeholder="Dirección y notas de entrega" rows="4" style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+    <i…
+bc2369638@gmail.com
+<button type="button" onclick="enviarWhatsApp()" 
+style="background:#25D366; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
+📲 Invia ordine via WhatsApp
+</button>
 
-    <input type="hidden" name="_subject" value="Nuevo pedido de huevos">
-    <input type="text" name="_gotcha" style="display:none">
-
-    <button type="submit" style="padding:12px; background:#4CAF50; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">
-      Enviar Pedido
-    </button>
-  </form>
-
-  <p id="pedido-ok" style="display:none; color:#2e7d32; text-align:center; margin-top:12px;">✅ Pedido enviado. Te contactaremos pronto.</p>
-  <p id="pedido-error" style="display:none; color:#c62828; text-align:center; margin-top:12px;">❌ Error al enviar. Intenta de nuevo.</p>
-</section>
+<button type="submit" 
+style="background:#0263d5; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
+✉️ Invia ordine via Email
+</button>
 
 <script>
-const form = document.getElementById('pedido-form');
-const okMsg = document.getElementById('pedido-ok');
-const errMsg = document.getElementById('pedido-error');
+function enviarWhatsApp() {
+    let name = document.querySelector("[name='name']").value;
+    let telefono = document.querySelector("[name='telefono']").value;
+    let cantidad = document.querySelector("[name='cantidad']").value;
+    let indirizzo = document.querySelector("[name='mensaje']").value;
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  okMsg.style.display = 'none';
-  errMsg.style.display = 'none';
+    let messaggio = `Ciao! Vorrei fare un …
+<!-- BOTÓN WhatsApp -->
+<button type="button" onclick="enviarWhatsApp()" 
+style="background:#25D366; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
+📲 Invia ordine via WhatsApp
+</button>
 
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (res.ok) {
-      form.reset();
-      okMsg.style.display = 'block';
-    } else {
-      errMsg.style.display = 'block';
-    }
-  } catch {
-    errMsg.style.display = 'block';
-  }
-});
-</script>
+<!-- BOTÓN Email -->
+<button type="submit" 
+style="background:#0263d5; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
+✉️ Invia ordine via Email
+</button>
 </body>
 </html>
