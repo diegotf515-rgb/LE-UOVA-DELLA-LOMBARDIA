@@ -94,19 +94,15 @@
 .breed-specs li {
   margin: 4px 0;
 }
-    .breed-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      text-align: center;
-      padding: 1rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .breed-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    }
+   .breed-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 1rem;
+    min-height: 560px; /* <-- AGREGAR ESTA LÍNEA */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
     .breed-img {
       width: 100%;
