@@ -550,40 +550,7 @@ Ordine minimo 14 uova (confezione da €10) – consegna gratuita a M…
 <section id="pedido" style="padding:30px; background:#f7f7f7; border-radius:12px; margin-top:40px;">
   <h2 style="text-align:center; margin-bottom:20px;">Haz tu pedido</h2>
 
-  <form id="pedido-form" action="https://formspree.io/f/mmnoobea" method="POST" style="max-width:520px; margin:auto; display:flex; flex-direction:column; gap:12px;">
-    <input type="text" name="name" placeholder="Nombre y Apellido" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <input type="email" name="email" placeholder="Correo electrónico" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <input type="text" name="telefono" placeholder="Número de teléfono" style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <i…
-bc2369638@gmail.com
-<button type="button" onclick="enviarWhatsApp()" 
-style="background:#25D366; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
-📲 Invia ordine via WhatsApp
-</button>
 
-<button type="submit" 
-style="background:#0263d5; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
-✉️ Invia ordine via Email
-</button>
-
-<script>
-function enviarWhatsApp() {
-    let name = document.querySelector("[name='name']").value;
-    let telefono = document.querySelector("[name='telefono']").value;
-    let cantidad = document.querySelector("[name='cantidad']").value;
-    let indirizzo = document.querySelector("[name='mensaje']").value;
-
-    let messaggio = `Ciao! Vorrei fare un …
-<!-- BOTÓN WhatsApp -->
-<button type="button" onclick="enviarWhatsApp()" 
-style="background:#25D366; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
-📲 Invia ordine via WhatsApp
-</button>
-
-<!-- BOTÓN Email -->
-<button type="submit" 
-style="background:#0263d5; color:white; padding:12px; border:none; border-radius:8px; width:100%; margin-top:10px; font-size:16px;">
-✉️ Invia ordine via Email
 </button>
 </body>
 </html>
