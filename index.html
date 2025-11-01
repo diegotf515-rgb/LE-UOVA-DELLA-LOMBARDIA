@@ -551,31 +551,7 @@ Ordine minimo 14 uova (confezione da €10) – consegna gratuita a Milano.
   </section>
 </main>
 
-<footer>
-  <div class="container">
-    <strong>Uova di Lombardia</strong><br>
-    <span class="small">Milano · Azienda familiare</span>
-  </div>
-</footer>
-
-<script>
-<script>
-  function waOrder(btn) {
-    const card = btn.closest('.card');
-    const breed = card.dataset.breed || card.querySelector('h3').innerText.trim();
-    const qty = card.querySelector('select').value;
-
-    // 👇 Cambia este número por tu número de WhatsApp con prefijo de país (sin +)
-    const phone = "+393276167577"; // Ejemplo: 393331234567
-
-    const text = Ciao! Vorrei ordinare ${qty} uova di ${breed} dal sito.;
-    const url = https://wa.me/${phone}?text=${encodeURIComponent(text)};
-    window.open(url, '_blank');
-  }
-</script>
-  [10:05, 01/11/2025] diegotf515: <span class="badge">Fattoria Artigianale</span>
-
-<h1 style="font-size:52px; font-weight:900; color:#1b5e20; text-shadow:0 3px 8px rgba(0,0,0,0.25);">
+  <h1 style="font-size:52px; font-weight:900; color:#1b5e20; text-shadow:0 3px 8px rgba(0,0,0,0.25);">
 La Fattoria dell’Uovo Naturale
 </h1>
 
