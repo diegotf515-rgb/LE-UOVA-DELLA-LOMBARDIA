@@ -164,67 +164,132 @@
 
 </div>
      
-    </div>
-  </section>
- <!-- Sección de las galline -->
-<section id="galline" style="padding: 60px 20px; background-color: #fff;">
-  <h2 style="text-align: center; color: #2f5d2f; font-size: 2.2rem; margin-bottom: 40px;">
-    Le nostre galline
-  </h2>
+<!DOCTYPE html><html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogo Galline</title>
+  <style>
+    :root{ --verde:#7da863; --nero:#222; --bianco:#fff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:var(--nero);background:var(--bianco)}/* SOLO GALLINE: griglia 3 per fila */
+.grid{max-width:1200px;margin:20px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0 18px 36px}
 
+/* Card */
+.card{background:var(--bianco);border:2px solid var(--verde);border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,.12);overflow:hidden;display:flex;flex-direction:column}
+.card img{display:block;width:100%;height:240px;object-fit:cover;object-position:center}
+.cnt{padding:12px}
+h3{margin:2px 0 8px;font-size:1.05rem}
+.rows{display:grid;gap:6px;margin:0}
+.rows p{margin:0}
+.rows strong{font-weight:700}
 
-<!-- INIZIO GRIGLIA RAZZE -->
-<!-- INIZIO GRIGLIA RAZZE -->
-<div class="cards">
+@media (max-width: 900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width: 600px){.grid{grid-template-columns:1fr}}
 
-  <!-- CARD: Gallina Marans -->
-  <div class="card">
-    <h3>Gallina Marans</h3>
-    <div class="figure">
-      <img src="images/marans.jpg" alt="Gallina Marans">
-      <img class="egg-dot" src="images/uovo-marans.jpg" alt="Uovo Marans">
-    </div>
-    <div class="text">
-      <p><strong>Colore dell’uovo:</strong> marrone cioccolato</p>
-      <p><strong>Peso uovo:</strong> 65–70 g</p>
-      <p><strong>Origine:</strong> Francia</p>
-      <p><strong>Carattere:</strong> tranquilla, socievole, ottima produttrice</p>
-      <label>Quantità:
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </label>
-    </div>
-  </div>
-
-  <!-- CARD: Gallina Livornese -->
-  <div class="card">
-    <h3>Gallina Livornese</h3>
-    <div class="figure">
-      <img src="images/livornese.jpg" alt="Gallina Livornese">
-      <img class="egg-dot" src="images/uovo-bianco.jpg" alt="Uovo bianco">
-    </div>
-    <div class="text">
-      <p><strong>Colore dell’uovo:</strong> bianco puro</p>
+  </style>
+</head>
+<body>
+  <main class="grid"><!-- 1. LIVORNESE -->
+<article class="card">
+  <img src="images/livornese.jpg" alt="Gallina Livornese" />
+  <div class="cnt">
+    <h3>Livornese (Livorno)</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> bianco puro</p>
       <p><strong>Peso uovo:</strong> 55–60 g</p>
-      <p><strong>Origine:</strong> Italia (Toscana)</p>
-      <p><strong>Carattere:</strong> attiva, buona foraggiatrice, docile</p>
-      <label>Quantità:
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </label>
+      <p><strong>Origine:</strong> Italia – Toscana</p>
+      <p><strong>Note:</strong> ottima ovaiola, molto attiva.</p>
     </div>
   </div>
+</article>
 
- 
+<!-- 2. MARANS -->
+<article class="card">
+  <img src="images/marans.jpg" alt="Gallina Marans" />
+  <div class="cnt">
+    <h3>Marans</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> marrone scuro (cioccolato)</p>
+      <p><strong>Peso uovo:</strong> 60–65 g</p>
+      <p><strong>Origine:</strong> Francia</p>
+      <p><strong>Note:</strong> uova molto pigmentate.</p>
+    </div>
+  </div>
+</article>
 
-<!-- FINE GRIGLIA RAZZE -->
+<!-- 3. ARAUCANA -->
+<article class="card">
+  <img src="images/araucana.jpg" alt="Gallina Araucana" />
+  <div class="cnt">
+    <h3>Araucana</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> azzurro/turchese</p>
+      <p><strong>Peso uovo:</strong> 50–60 g</p>
+      <p><strong>Origine:</strong> Cile</p>
+      <p><strong>Note:</strong> uova colorate naturali.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 4. CREAM LEGBAR -->
+<article class="card">
+  <img src="images/legbar.jpg" alt="Gallina Cream Legbar" />
+  <div class="cnt">
+    <h3>Cream Legbar</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> azzurro/verde chiaro</p>
+      <p><strong>Peso uovo:</strong> 55–60 g</p>
+      <p><strong>Origine:</strong> Regno Unito</p>
+      <p><strong>Note:</strong> produzione costante.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 5. AUSTRALORP -->
+<article class="card">
+  <img src="images/australorp.jpg" alt="Gallina Australorp" />
+  <div class="cnt">
+    <h3>Australorp</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> marrone chiaro</p>
+      <p><strong>Peso uovo:</strong> 55–62 g</p>
+      <p><strong>Origine:</strong> Australia</p>
+      <p><strong>Note:</strong> docile, ottima ovaiola.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 6. BRAHMA -->
+<article class="card">
+  <img src="images/brahma.jpg" alt="Gallina Brahma" />
+  <div class="cnt">
+    <h3>Brahma</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> crema/beige</p>
+      <p><strong>Peso uovo:</strong> 55–60 g</p>
+      <p><strong>Origine:</strong> Asia/USA</p>
+      <p><strong>Note:</strong> grande taglia, tranquilla.</p>
+    </div>
+  </div>
+</article>
+
+<!-- TEMPLATE PER ALTRE RAZZE (duplica e modifica) -->
+<!--
+<article class="card">
+  <img src="images/NOMEFILE.jpg" alt="Gallina NOME" />
+  <div class="cnt">
+    <h3>NOME RAZZA</h3>
+    <div class="rows">
+      <p><strong>Colore uovo:</strong> ...</p>
+      <p><strong>Peso uovo:</strong> ...</p>
+      <p><strong>Origine:</strong> ...</p>
+      <p><strong>Note:</strong> ...</p>
+    </div>
+  </div>
+</article>
+-->
+
+  </main>
+</body>
+</html>
