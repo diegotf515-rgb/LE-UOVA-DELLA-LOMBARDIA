@@ -217,7 +217,7 @@
 
   <div class="spacer"></div>
 
- <!-- SEZIONE ORDINE (ROBUSTA) -->
+<!-- SEZIONE ORDINE (ROBUSTA) -->
 <section class="wrap" style="margin-top:60px;margin-bottom:60px;">
   <h2 class="section-title">Ordina le tue uova</h2>
 
@@ -240,56 +240,50 @@
            style="width:100%;padding:10px;margin-bottom:18px;border-radius:8px;border:1px solid #ccc;">
 
     <div style="display:flex;gap:12px;justify-content:space-between;margin-top:14px;flex-wrap:wrap;">
-      <!-- Botón WhatsApp -->
-      <button type="button" onclick="sendWhatsApp()" 
-        style="flex:1;padding:14px;background:#25D366;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+      
+      <a id="btnWA"
+         href="https://api.whatsapp.com/send?phone=393276167577"
+         style="flex:1;padding:14px;background:#25D366;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;text-align:center;text-decoration:none;display:block;">
         📲 Ordina tramite WhatsApp
-      </button>
+      </a>
 
-      <!-- Botón Email -->
-      <button type="button" onclick="sendEmail()" 
-        style="flex:1;padding:14px;background:#1A73E8;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+      <a id="btnMail"
+         href="mailto:diegotipanandino@outlook.it?subject=Ordine%20uova"
+         style="flex:1;padding:14px;background:#1A73E8;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;text-align:center;text-decoration:none;display:block;">
         ✉️ Ordina tramite e-mail
-      </button>
+      </a>
+
     </div>
   </form>
 </section>
 
 <script>
 (function(){
-  // CONFIGURA AQUÍ TUS DATOS:
-  const YOUR_WA_NUMBER = "393276167577"; // Italia: 39 + número sin +, sin espacios
-  const YOUR_EMAIL     = "diego.t.f@outlook.it";
-
-  // Evitar que el formulario se envíe (Enter) y recargue la página
-  document.getElementById("orderForm").addEventListener("submit", function(e){
-    e.preventDefault();
-  });
+  const WA_NUMBER = "393276167577"; 
+  const EMAIL_TO  = "diegotipanandino@outlook.it";
 
   function buildMessage(){
-    const nome = document.getElementById("nome").value || "";
-    const tel  = document.getElementById("telefono").value || "";
-    const mail = document.getElementById("email").value || "";
-    const addr = document.getElementById("indirizzo").value || "";
-    const qty  = document.getElementById("quantita").value || "";
+    const nome = document.getElementById("nome")?.value || "";
+    const tel  = document.getElementById("telefono")?.value || "";
+    const mail = document.getElementById("email")?.value || "";
+    const addr = document.getElementById("indirizzo")?.value || "";
+    const qty  = document.getElementById("quantita")?.value || "";
+
     return Ciao, vorrei ordinare uova.\n\n👤 Nome: ${nome}\n📞 Telefono: ${tel}\n✉️ Email: ${mail}\n📍 Indirizzo: ${addr}\n🥚 Quantità: ${qty};
   }
 
-  // Exponer funciones en window para los botones
-  window.sendWhatsApp = function(){
-    const msg = buildMessage();
-    const url = https://wa.me/${YOUR_WA_NUMBER}?text=${encodeURIComponent(msg)};
-    // usar location.href evita bloqueos y NO vuelve arriba
-    window.location.href = url;
-  };
+  document.getElementById("btnWA").addEventListener("click", function(){
+    const msg = encodeURIComponent(buildMessage());
+    this.href = https://api.whatsapp.com/send?phone=${WA_NUMBER}&text=${msg};
+  });
 
-  window.sendEmail = function(){
-    const msg = buildMessage();
+  document.getElementById("btnMail").addEventListener("click", function(){
     const subject = encodeURIComponent("Ordine uova");
-    const body    = encodeURIComponent(msg);
-    window.location.href = mailto:${YOUR_EMAIL}?subject=${subject}&body=${body};
-  };
+    const body    = encodeURIComponent(buildMessage());
+    this.href = mailto:${EMAIL_TO}?subject=${subject}&body=${body};
+  });
 })();
 </script>
+
 </body>
 </html>
