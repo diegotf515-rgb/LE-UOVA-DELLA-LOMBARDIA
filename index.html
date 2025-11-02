@@ -49,13 +49,21 @@
   <style>
   
      /* === Cards razze + ordine === */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+.card {
+    background: #ffffee;
+    position: relative;
+    backdrop-filter: blur(2px);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,.10);
 }
-
+.egg-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+}
 .card {
   background: #ffffffee;
   backdrop-filter: blur(2px);
