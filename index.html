@@ -252,23 +252,25 @@
 </section>
 
 <script>
-function getMessage(){
-  const nome = document.getElementById("nome").value;
-  const indirizzo = document.getElementById("indirizzo").value;
-  const quantita = document.getElementById("quantita").value;
-
-  return Ciao, vorrei ordinare uova.%0A%0A👤 Nome: ${nome}%0A📍 Indirizzo: ${indirizzo}%0A🥚 Quantità: ${quantita};
+function getMessagePlain(){
+  const nome = document.getElementById("nome").value || "";
+  const indirizzo = document.getElementById("indirizzo").value || "";
+  const quantita = document.getElementById("quantita").value || "";
+  return Ciao, vorrei ordinare uova.\n\n👤 Nome: ${nome}\n📍 Indirizzo: ${indirizzo}\n🥚 Quantità: ${quantita};
 }
 
 function sendWhatsApp(){
-  const msg = getMessage();
-  window.open(https://wa.me/393276167577?text=${msg});
+  const msg = getMessagePlain();
+  const url = https://wa.me/393276167577?text=${encodeURIComponent(msg)};
+  window.location.href = url; // evita bloqueos de pop-up
 }
 
 function sendEmail(){
-  const msg = getMessage().replace(/%0A/g, '\n');
-  window.location.href = mailto:d.t.f@outlook.it?subject=Ordine uova&body=${msg};
-  }
+  const msg = getMessagePlain();
+  const subject = encodeURIComponent("Ordine uova");
+  const body = encodeURIComponent(msg);
+  window.location.href = mailto:diegotipanandino@outlook.it?subject=${subject}&body=${body};
+}
 </script>
 </body>
 </html>
