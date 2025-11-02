@@ -390,3 +390,50 @@
 </div> <!-- /galline-grid -->
 </section>
   
+<!-- === FORMULARIO ORDEN === -->
+<section style="max-width:600px;margin:50px auto;padding:20px;border:2px solid #155c14;border-radius:10px;">
+    
+    <h2 style="text-align:center;color:#155c14;margin-bottom:20px;">
+        Ordina le tue uova fresche 🥚
+    </h2>
+
+    <label>Nome & Cognome:</label>
+    <input id="nome" type="text" placeholder="Scrivi il tuo nome" 
+        style="width:100%;padding:10px;margin:5px 0 15px;border-radius:6px;border:1px solid #ccc;">
+
+    <label>Quantità (uova):</label>
+    <input id="quantita" type="number" placeholder="Es. 10" 
+        style="width:100%;padding:10px;margin:5px 0 15px;border-radius:6px;border:1px solid #ccc;">
+
+    <label>Indirizzo di consegna:</label>
+    <input id="indirizzo" type="text" placeholder="Via, numero, città" 
+        style="width:100%;padding:10px;margin:5px 0 20px;border-radius:6px;border:1px solid #ccc;">
+
+    <button onclick="inviaOrdine()" 
+        style="width:100%;padding:15px;background:#25D366;color:white;font-weight:bold;border:none;border-radius:8px;font-size:18px;cursor:pointer;">
+        📩 Invia ordine su WhatsApp
+    </button>
+
+
+
+
+</section> <!-- formulario -->
+
+<script>
+function inviaOrdine() {
+    const nome = document.getElementById("nome").value;
+    const quantita = document.getElementById("quantita").value;
+    const indirizzo = document.getElementById("indirizzo").value;
+
+    const telefono = "39XXXXXXXXXX"; // tu numero sin + ni espacios
+
+    const msg = *Nuovo ordine uova 🥚*\n\n👤 Nome: ${nome}\n🥚 Quantità: ${quantita}\n📍 Indirizzo: ${indirizzo};
+
+    const url = https://wa.me/${telefono}?text= + encodeURIComponent(msg);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
+ 
