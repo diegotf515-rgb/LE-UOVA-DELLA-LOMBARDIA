@@ -391,48 +391,6 @@
  
   
  </div> <!-- /galline-grid -->
-</section>
-
-<!-- Formulario pedido -->
-<section style="max-width:600px;margin:50px auto;padding:20px;border:2px solid #155c14;border-radius:12px;background:#fff;">
-    <h2 style="text-align:center;color:#155c14;margin-bottom:20px;">Ordina le tue uova 🥚</h2>
-
-    <label>Nome & Cognome:</label>
-    <input id="nome" type="text" placeholder="Scrivi il tuo nome" style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
-
-    <label>Quantità (uova):</label>
-    <input id="quantita" type="number" placeholder="Es. 10" style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
-
-    <label>Indirizzo di consegna:</label>
-    <input id="indirizzo" type="text" placeholder="Via, numero, città" style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
-
-    <button onclick="inviaOrdine()" style="width:100%;padding:14px;background:#25d366;color:#fff;font-size:1rem;border:none;border-radius:10px;font-weight:700;cursor:pointer;">
-        Invia ordine su WhatsApp 📩
-    </button>
-</section>
-  <!-- BOTÓN WHATSAPP FLOTANTE -->
-<a href="#" id="waBtn" 
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; 
-          padding:12px 18px; border-radius:50px; font-weight:bold; 
-          font-family:Arial; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,.2); z-index:999;">
-   📩 Ordina su WhatsApp
-</a>
-
-<script>
-function inviaOrdine() {
-  let nome = document.getElementById("nome").value;
-  let qty = document.getElementById("quantita").value;
-  let indirizzo = document.getElementById("indirizzo").value;
-
-  if(!nome || !qty || !indirizzo){
-     alert("Compila tutti i campi!");
-     return;
-  }
-
-  let msg = *Nuovo Ordine Uova*%0A%0A👤 Nome: ${nome}%0A🥚 Quantità: ${qty}%0A🏡 Indirizzo: ${indirizzo};
-  window.open(https://wa.me/39TUONUMERO?text=${msg}, "_blank");
-}
-</script>
 
 </body>
 </html>
