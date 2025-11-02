@@ -217,16 +217,22 @@
 
   <div class="spacer"></div>
 
-   <!-- SEZIONE ORDINE -->
+  <!-- SEZIONE ORDINE -->
 <section class="wrap" style="margin-top:60px;margin-bottom:60px;">
   <h2 class="section-title">Ordina le tue uova</h2>
 
-  <form id="orderForm" style="background:#fff;padding:22px;border:2px solid #3f7f3f;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.12);max-width:600px;margin:auto;">
+  <form id="orderForm" style="background:#ffffff;padding:24px;border:1px solid #e6e6e6;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,0.08);max-width:650px;margin:auto;" onsubmit="return false;">
     
     <label>Nome e cognome</label><br>
     <input type="text" id="nome" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
     
-    <label>Indirizzo di consegna</label><br>
+    <label>Telefono</label><br>
+    <input type="tel" id="telefono" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
+
+    <label>Email</label><br>
+    <input type="email" id="email" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
+
+    <label>Indirizzo</label><br>
     <input type="text" id="indirizzo" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
 
     <label>Quantità (uova)</label><br>
@@ -234,43 +240,69 @@
            style="width:100%;padding:10px;margin-bottom:18px;border-radius:8px;border:1px solid #ccc;">
 
     <div style="display:flex;gap:12px;justify-content:space-between;margin-top:14px;flex-wrap:wrap;">
-      
-      <!-- Pulsante Whatsapp -->
-      <button type="button" onclick="sendWhatsApp()" 
-        style="flex:1;padding:14px;background:#25D366;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+      <!-- WhatsApp -->
+      <a id="btnWA"
+         href="#"
+         style="flex:1;padding:14px;background:#25D366;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;text-align:center;text-decoration:none;display:block;">
         📲 Ordina tramite WhatsApp
-      </button>
+      </a>
 
-      <!-- Pulsante Email -->
-      <button type="button" onclick="sendEmail()" 
-        style="flex:1;padding:14px;background:#1A73E8;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+      <!-- Email -->
+      <a id="btnMail"
+         href="#"
+         style="flex:1;padding:14px;background:#1A73E8;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;text-align:center;text-decoration:none;display:block;">
         ✉️ Ordina tramite e-mail
-      </button>
+      </a>
 
+      <!-- (OPZIONALE) Messenger: cambia YOURPAGE -->
+      <!-- <a id="btnMsgr" href="https://m.me/YOURPAGE" style="flex:1;padding:14px;background:#0084FF;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;text-align:center;text-decoration:none;display:block;">
+        💬 Ordina via Messenger
+      </a> -->
     </div>
   </form>
 </section>
 
 <script>
-function getMessagePlain(){
-  const nome = document.getElementById("nome").value || "";
-  const indirizzo = document.getElementById("indirizzo").value || "";
-  const quantita = document.getElementById("quantita").value || "";
-  return Ciao, vorrei ordinare uova.\n\n👤 Nome: ${nome}\n📍 Indirizzo: ${indirizzo}\n🥚 Quantità: ${quantita};
-}
+(function(){
+  // TU NUMERO (Italia): 39 + numero senza + e senza spazi
+  const YOUR_WA_NUMBER = "393276167577";
+  const YOUR_EMAIL = "diegotipanandino@outlook.it";
 
-function sendWhatsApp(){
-  const msg = getMessagePlain();
-  const url = https://wa.me/393276167577?text=${encodeURIComponent(msg)};
-  window.location.href = url; // evita bloqueos de pop-up
-}
+  function buildMessage(){
+    const nome = document.getElementById("nome").value || "";
+    const tel  = document.getElementById("telefono").value || "";
+    const mail = document.getElementById("email").value || "";
+    const addr = document.getElementById("indirizzo").value || "";
+    const qty  = document.getElementById("quantita").value || "";
 
-function sendEmail(){
-  const msg = getMessagePlain();
-  const subject = encodeURIComponent("Ordine uova");
-  const body = encodeURIComponent(msg);
-  window.location.href = mailto:diegotipanandino@outlook.it?subject=${subject}&body=${body};
-}
+    return `Ciao, vorrei ordinare uova.
+
+👤 Nome: ${nome}
+📞 Telefono: ${tel}
+✉️ Email: ${mail}
+📍 Indirizzo: ${addr}
+🥚 Quantità: ${qty}`;
+  }
+
+  function updateLinks(){
+    const msg = buildMessage();
+    const waURL   = https://wa.me/${YOUR_WA_NUMBER}?text=${encodeURIComponent(msg)};
+    const mailURL = mailto:${YOUR_EMAIL}?subject=${encodeURIComponent("Ordine uova")}&body=${encodeURIComponent(msg)};
+
+    document.getElementById("btnWA").setAttribute("href", waURL);
+    document.getElementById("btnMail").setAttribute("href", mailURL);
+  }
+
+  // Actualiza enlaces cuando el usuario escribe
+  ["nome","telefono","email","indirizzo","quantita"].forEach(id=>{
+    const el = document.getElementById(id);
+    el.addEventListener("input", updateLinks);
+    el.addEventListener("change", updateLinks);
+  });
+
+  // Inicial
+  updateLinks();
+})();
 </script>
 </body>
 </html>
