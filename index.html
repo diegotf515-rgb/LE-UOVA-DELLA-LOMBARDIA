@@ -216,5 +216,59 @@
   </section>
 
   <div class="spacer"></div>
+
+   <!-- SEZIONE ORDINE -->
+<section class="wrap" style="margin-top:60px;margin-bottom:60px;">
+  <h2 class="section-title">Ordina le tue uova</h2>
+
+  <form id="orderForm" style="background:#fff;padding:22px;border:2px solid #3f7f3f;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.12);max-width:600px;margin:auto;">
+    
+    <label>Nome e cognome</label><br>
+    <input type="text" id="nome" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
+    
+    <label>Indirizzo di consegna</label><br>
+    <input type="text" id="indirizzo" required style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
+
+    <label>Quantità (uova)</label><br>
+    <input type="number" id="quantita" required min="1"
+           style="width:100%;padding:10px;margin-bottom:18px;border-radius:8px;border:1px solid #ccc;">
+
+    <div style="display:flex;gap:12px;justify-content:space-between;margin-top:14px;flex-wrap:wrap;">
+      
+      <!-- Pulsante Whatsapp -->
+      <button type="button" onclick="sendWhatsApp()" 
+        style="flex:1;padding:14px;background:#25D366;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+        📲 Ordina tramite WhatsApp
+      </button>
+
+      <!-- Pulsante Email -->
+      <button type="button" onclick="sendEmail()" 
+        style="flex:1;padding:14px;background:#1A73E8;color:#fff;font-weight:700;border:none;border-radius:8px;font-size:16px;cursor:pointer;">
+        ✉️ Ordina tramite e-mail
+      </button>
+
+    </div>
+  </form>
+</section>
+
+<script>
+function getMessage(){
+  const nome = document.getElementById("nome").value;
+  const indirizzo = document.getElementById("indirizzo").value;
+  const quantita = document.getElementById("quantita").value;
+
+  return Ciao, vorrei ordinare uova.%0A%0A👤 Nome: ${nome}%0A📍 Indirizzo: ${indirizzo}%0A🥚 Quantità: ${quantita};
+}
+
+function sendWhatsApp(){
+  const msg = getMessage();
+  window.open(https://wa.me/39YOURNUMBERHERE?text=${msg});
+}
+
+function sendEmail(){
+  const msg = getMessage().replace(/%0A/g, '\n');
+  window.location.href = mailto:TUOEMAIL@gmail.com?subject=Ordine uova&body=${msg};
+}
+</script>
 </body>
 </html>
