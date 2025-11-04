@@ -63,10 +63,11 @@
       margin:0 0 28px;
       font-size:1.9rem;
       color:#1b3d14;
-   grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:18px;
+  .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  align-items: start; /* evita que las otras tarjetas se alarguen */
 }
     /* ========== CARD ========== */
     .card{
